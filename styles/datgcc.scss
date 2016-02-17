@@ -1,0 +1,171 @@
+//DEFINE VARIABLES
+
+//Colors
+$red: #F74902; 
+$white: #fefefe;
+
+//Sizes
+$pageBorder: 20px;
+
+//Fonts
+$franklin: 'ITC Franklin Gothic W01', sans-serif;
+$century: 'MT Century Schoolbook W01', serif;
+
+$regular: 400;
+$medium: 500;
+$demin:600;
+$heavy:800;
+$dComp:900;
+
+
+/***************
+Z-INDICES
+
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000	#pageBorder
+***************/
+
+*
+{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-weight: normal;
+	border: none;
+	outline: none;
+}
+
+html
+{
+	font-size: 62.5%;
+}
+
+body
+{
+	background-color: $white;
+}
+
+//OVERALL PAGE BORDER AND BACKGROUND
+#pageBorder
+{
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	
+	div
+	{
+		position: fixed;
+		background-color: $white;
+	}
+
+	#top
+	{
+		width: 100%;
+		height: $pageBorder;
+		top: 0;
+		left: 0;
+	}
+	
+	#bottom
+	{
+		width: 100%;
+		height: $pageBorder;
+		bottom: 0;
+		left: 0;
+	}
+	
+	#left
+	{
+		width: $pageBorder;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	
+	#right
+	{
+		width: $pageBorder;
+		height: 100%;
+		top: 0;
+		right: 0;
+	}
+}
+
+#pageBG
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	background-color: $red;
+}
+//END OVERALL PAGE BORDER AND BACKGROUND
+
+
+//MAIN CONTENT
+#mainContent
+{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	
+	//TOP SECTION
+	#top
+	{
+		text-align: center;
+		position: relative;
+		height: 1px;
+		overflow: visible;
+		height: 100%;
+		
+		.content
+		{
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		h1
+		{
+			font-family: $century;
+			color: $white;
+			font-size: 15em;
+			font-weight: $regular;
+			display: block;
+			
+			span
+			{
+				margin-top: .8em;
+				font-family: $franklin;
+				display: block;
+				font-weight: $dComp;
+				font-size: .2em;
+				text-transform: uppercase;
+				letter-spacing: .2em;
+			}
+		}
+		
+		
+	}
+}
+
